@@ -1,8 +1,9 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
 
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note input name="note"
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note [input name="note"]
     Note right of browser: The browser sends a POST request with the data defined input field called "note"
     activate server
     server-->>browser: Status code 302 Found
@@ -27,4 +28,6 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: the JSON file
+    Note left of server: The server sends updated JSON file to the page to rerender"
     deactivate server
+```

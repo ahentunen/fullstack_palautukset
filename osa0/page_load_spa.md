@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -20,5 +21,6 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: the JSON file
-    Note right of browser: All the data (notes) that are loaded HTLM elements using DOM-api
+    Note right of browser: All the data (notes) that are loaded by HTLM elements using DOM-api
     deactivate server
+```
